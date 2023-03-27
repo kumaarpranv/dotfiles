@@ -1,0 +1,15 @@
+# Ignore everything in repository root 
+/*
+
+# Files to not ignore
+!/.gitignore
+
+# Folder to not ignore
+!/nvim/
+!/doom/
+!/starshipconfig/
+!/polybar/
+!/bspwm/
+!/sxhkd/
+!/kitty/
+!/albert.conf
