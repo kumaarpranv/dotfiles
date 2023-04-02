@@ -104,11 +104,19 @@ diffview.setup({
             { "n", "g<C-x>", actions.cycle_layout, { desc = "Cycle through available layouts." } },
             { "n", "[x", actions.prev_conflict, { desc = "In the merge-tool: jump to the previous conflict" } },
             { "n", "]x", actions.next_conflict, { desc = "In the merge-tool: jump to the next conflict" } },
-            { "n", "<leader>co", actions.conflict_choose("ours"), { desc = "Choose the OURS version of a conflict" } },
-            { "n", "<leader>ct", actions.conflict_choose("theirs"), { desc = "Choose the THEIRS version of a conflict" } },
-            { "n", "<leader>cb", actions.conflict_choose("base"), { desc = "Choose the BASE version of a conflict" } },
-            { "n", "<leader>ca", actions.conflict_choose("all"), { desc = "Choose all the versions of a conflict" } },
+            { "n", "<leader>go", actions.conflict_choose("ours"), { desc = "Choose the OURS version of a conflict" } },
+            { "n", "<leader>gt", actions.conflict_choose("theirs"), { desc = "Choose the THEIRS version of a conflict" } },
+            { "n", "<leader>gb", actions.conflict_choose("base"), { desc = "Choose the BASE version of a conflict" } },
+            { "n", "<leader>ga", actions.conflict_choose("all"), { desc = "Choose all the versions of a conflict" } },
             { "n", "dx", actions.conflict_choose("none"), { desc = "Delete the conflict region" } },
+
+
+            { "v", "<leader>go", actions.conflict_choose("ours"), { desc = "Choose the OURS version of a conflict" } },
+            { "v", "<leader>gt", actions.conflict_choose("theirs"), { desc = "Choose the THEIRS version of a conflict" } },
+            { "v", "<leader>gb", actions.conflict_choose("base"), { desc = "Choose the BASE version of a conflict" } },
+            { "v", "<leader>ga", actions.conflict_choose("all"), { desc = "Choose all the versions of a conflict" } },
+            { "v", "dx", actions.conflict_choose("none"), { desc = "Delete the conflict region" } },
+ 
         },
         diff1 = {
             -- Mappings in single window diff layouts
@@ -203,3 +211,9 @@ diffview.setup({
         },
     },
 })
+
+vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<CR>")
+vim.keymap.set("n", "<leader>gdc", "<cmd>DiffviewClose<CR>")
+vim.keymap.set("n", "<leader>gf", "<cmd>DiffviewFileHistory<CR>")
+vim.keymap.set("n", "<leader>gft", "<cmd>DiffviewToggleFiles<CR>")
+
