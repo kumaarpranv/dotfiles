@@ -37,4 +37,4 @@ vim.keymap.set("n", "<leader>th", ":-tabmove<CR>")
 -- move current tab to next position
 vim.keymap.set("n", "<leader>tl", ":+tabmove<CR>")
 
-
+vim.keymap.set("n", "<leader>z", "<C-^>")
