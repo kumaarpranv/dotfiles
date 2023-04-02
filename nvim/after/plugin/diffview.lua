@@ -212,8 +212,8 @@ diffview.setup({
     },
 })
 
-vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<CR>")
+vim.keymap.set("n", "<leader>gdo", "<cmd>DiffviewOpen<CR>")
 vim.keymap.set("n", "<leader>gdc", "<cmd>DiffviewClose<CR>")
-vim.keymap.set("n", "<leader>gf", "<cmd>DiffviewFileHistory<CR>")
+vim.keymap.set("n", "<leader>gfh", "<cmd>DiffviewFileHistory<CR>")
 vim.keymap.set("n", "<leader>gft", "<cmd>DiffviewToggleFiles<CR>")
 
