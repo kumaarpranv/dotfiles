@@ -1,5 +1,5 @@
-vim.keymap.set("n", "<C-v>", "<Esc>pi")
-vim.keymap.set("i", "<C-v>", "<Esc>pi")
+-- vim.keymap.set("n", "<C-v>", "<Esc>pi")
+-- vim.keymap.set("i", "<C-v>", "<Esc>pi")
 vim.keymap.set("n", "<C-q>", vim.cmd.close)
 vim.keymap.set("i", "<C-q>", vim.cmd.close)
 
