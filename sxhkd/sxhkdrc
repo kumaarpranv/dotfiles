@@ -59,6 +59,14 @@ super + y
 super + g
 	bspc node -s biggest.window
 
+# swap winddow with direction
+super + shift + {h,j,k,l}
+  bspc node -s {west,south,north,east}
+
+# toggle floating on/off
+super + o
+  bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
 #
 # state/flags
 #
@@ -78,6 +86,10 @@ super + ctrl + {m,x,y,z}
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
+
+#focus on desktop
+super + {0,9}
+  bspc desktop -f {0-9}
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -113,7 +125,7 @@ super + alt + {Left, Right}
   bspc desktop -f {prev, next}
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
+super + alt + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
