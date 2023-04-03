@@ -1,11 +1,11 @@
 # Ignore everything in repository root 
 /*
 albert.conf
-
-# Files to not ignore
-!/.gitignore
-
-# Folder to not ignore
+#
+# # Files to not ignore
+# !/.gitignore
+#
+# # Folder to not ignore
 !/nvim/
 !/doom/
 !/starshipconfig/
@@ -13,4 +13,5 @@ albert.conf
 !/bspwm/
 !/sxhkd/
 !/kitty/
-!/i3/
+# !/i3/
+#!/dunst/
