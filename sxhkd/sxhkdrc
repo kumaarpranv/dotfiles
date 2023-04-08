@@ -157,8 +157,16 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # rotate a window
-super + {r}
+super + r
   bspc node @parent -R 90
+
+# move window
+alt + shift + r
+  bspc node @/ -R 90 && bspc node @/1 -R -90 && bspc node @/2 -R -90
+
+# switch active window by workspace
+alt + shift + {Left,Right}
+    id=$(bspc query --nodes --node); bspc node --to-desktop {prev,next}; bspc desktop --focus next; bspc node --focus ${id}
 
 #
 # Special hotkeys
