@@ -109,6 +109,7 @@ lazy.setup({
         dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     },
     "nvim-telescope/telescope-project.nvim",
+    "ahmedkhalf/project.nvim",
     -- toggleterm
     { "akinsho/toggleterm.nvim",         version = "*" },
 

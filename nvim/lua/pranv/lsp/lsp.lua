@@ -16,10 +16,9 @@ lsp.setup_servers({
   'eslint',
   'jedi_language_server',
   'gopls',
+  'lua_ls',
   'clangd',
   'svelte',
-  'sumneko_lua',
-  'python-lsp-server',
   'rust_analyzer',
   'tailwindcss',
   'tsserver',
@@ -112,7 +111,7 @@ mason_nullls.setup({
   automatic_setup = true,
   ensure_installed = { "black" }
 })
-mason_nullls.setup_handlers({})
+-- mason_nullls.setup_handlers({})
 
 vim.diagnostic.config({
   virtual_text = true,
