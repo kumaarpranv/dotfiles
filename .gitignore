@@ -13,5 +13,6 @@ albert.conf
 !/bspwm/
 !/sxhkd/
 !/kitty/
+!.picomconf
 # !/i3/
 #!/dunst/
