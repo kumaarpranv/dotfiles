@@ -18,6 +18,11 @@ if not lspsaga_ok then
   return
 end
 
+local lsp_lines_ok, lsp_lines = pcall(require, "lsp_lines")
+if not lsp_lines_ok then
+  return
+end
+
 null_ls.setup({})
 
 lsp.preset('recommended')
@@ -116,7 +121,7 @@ mason_nullls.setup({
 -- mason_nullls.setup_handlers({})
 
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = false,
 })
 
 
@@ -178,7 +183,7 @@ local lsp_signature_cfg = {
 }
 
 lsp_signature.setup(lsp_signature_cfg)
-
+lsp_lines.setup()
 
 vim.keymap.set({ 'n' }, '<C-.>',
 function()
@@ -285,16 +290,16 @@ vim.keymap.set("n","gt", "<cmd>Lspsaga goto_type_definition<CR>")
 -- Show line diagnostics
 -- You can pass argument ++unfocus to
 -- unfocus the show_line_diagnostics floating window
-vim.keymap.set("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>")
+vim.keymap.set("n", "<leader>gsl", "<cmd>Lspsaga show_line_diagnostics<CR>")
 
 -- Show buffer diagnostics
-vim.keymap.set("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>")
+vim.keymap.set("n", "<leader>gb", "<cmd>Lspsaga show_buf_diagnostics<CR>")
 
 -- Show workspace diagnostics
-vim.keymap.set("n", "<leader>sw", "<cmd>Lspsaga show_workspace_diagnostics<CR>")
+vim.keymap.set("n", "<leader>gw", "<cmd>Lspsaga show_workspace_diagnostics<CR>")
 
 -- Show cursor diagnostics
-vim.keymap.set("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>")
+vim.keymap.set("n", "<leader>gc", "<cmd>Lspsaga show_cursor_diagnostics<CR>")
 
 -- Diagnostic jump
 -- You can use <C-o> to jump back to your previous location

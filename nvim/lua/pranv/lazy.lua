@@ -7,117 +7,122 @@ end
 
 
 lazy.setup({
-    -- Packer can manage itself
-    "wbthomason/packer.nvim",
+  -- Packer can manage itself
+  "wbthomason/packer.nvim",
 
-    -- optimizations
-    "lewis6991/impatient.nvim",
+  -- optimizations
+  "lewis6991/impatient.nvim",
 
-    -- tabs
-    "nanozuki/tabby.nvim",
+  -- tabs
+  "nanozuki/tabby.nvim",
 
-    -- session & projs
-    {
-        'rmagatti/auto-session',
-    },
-    --utils
-    "nvim-lua/plenary.nvim",
-    "ThePrimeagen/harpoon",
-    "mbbill/undotree",
-    "numToStr/Comment.nvim",
-    "lukas-reineke/indent-blankline.nvim",
-    "windwp/nvim-autopairs",
-    "mg979/vim-visual-multi",
-    {
-        "folke/trouble.nvim",
-        dependencies = "nvim-tree/nvim-web-devicons",
-    },
-    -- whichkey
-    {
-        "folke/which-key.nvim",
-        config = function()
-          vim.o.timeout = true
-          vim.o.timeoutlen = 300
-        end,
-    },
-    "xiyaowong/nvim-transparent",
-    -- lsp
-    { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
-    {
-        "VonHeikemen/lsp-zero.nvim",
-        dependencies = {
-            -- LSP Support
-            { "neovim/nvim-lspconfig" },
-            { "williamboman/mason.nvim" },
-            { "williamboman/mason-lspconfig.nvim" },
-            { "jose-elias-alvarez/null-ls.nvim" },
-            { "jay-babu/mason-null-ls.nvim" },
+  -- session & projs
+  {
+    'rmagatti/auto-session',
+  },
+  --utils
+  "nvim-lua/plenary.nvim",
+  "ThePrimeagen/harpoon",
+  "mbbill/undotree",
+  "numToStr/Comment.nvim",
+  "lukas-reineke/indent-blankline.nvim",
+  "windwp/nvim-autopairs",
+  "mg979/vim-visual-multi",
+  {
+    "folke/trouble.nvim",
+    dependencies = "nvim-tree/nvim-web-devicons",
+  },
+  "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 
-            -- Autocompletion
-            { "hrsh7th/nvim-cmp" },
-            { "hrsh7th/cmp-buffer" },
-            { "hrsh7th/cmp-path" },
-            { "saadparwaiz1/cmp_luasnip" },
-            { "hrsh7th/cmp-nvim-lsp" },
-            { "hrsh7th/cmp-nvim-lua" },
+  -- whichkey
+  {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+  },
+  "xiyaowong/nvim-transparent",
+  -- lsp
+  { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
+  {
+    "VonHeikemen/lsp-zero.nvim",
+    dependencies = {
+      -- LSP Support
+      { "neovim/nvim-lspconfig" },
+      { "williamboman/mason.nvim" },
+      { "williamboman/mason-lspconfig.nvim" },
+      { "jose-elias-alvarez/null-ls.nvim" },
+      { "jay-babu/mason-null-ls.nvim" },
 
-            -- Snippets
-            { "L3MON4D3/LuaSnip" },
-            { "rafamadriz/friendly-snippets" },
-        }
-    },
-    "ray-x/lsp_signature.nvim",
-    "glepnir/lspsaga.nvim",
+      -- Autocompletion
+      { "hrsh7th/nvim-cmp" },
+      { "hrsh7th/cmp-buffer" },
+      { "hrsh7th/cmp-path" },
+      { "saadparwaiz1/cmp_luasnip" },
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "hrsh7th/cmp-nvim-lua" },
 
-    -- dap
-    "mfussenegger/nvim-dap",
-    "mfussenegger/nvim-dap-python",
-    "leoluz/nvim-dap-go",
-    "rcarriga/nvim-dap-ui",
+      -- Snippets
+      { "L3MON4D3/LuaSnip" },
+      { "rafamadriz/friendly-snippets" },
+    }
+  },
+  "ray-x/lsp_signature.nvim",
+  "glepnir/lspsaga.nvim",
 
-    -- color themes
-    "gruvbox-community/gruvbox",
-    "EdenEast/nightfox.nvim",
+  -- dap
+  "mfussenegger/nvim-dap",
+  "mfussenegger/nvim-dap-python",
+  "leoluz/nvim-dap-go",
+  "rcarriga/nvim-dap-ui",
 
-    -- explorer
-    -- {
-    --   "nvim-neo-tree/neo-tree.nvim",
-    --   branch = "v2.x",
-    --   dependencies = {
-    --     "nvim-lua/plenary.nvim",
-    --     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-    --     "MunifTanjim/nui.nvim",
-    --   }
-    -- },
+  -- color themes
+  "gruvbox-community/gruvbox",
+  "EdenEast/nightfox.nvim",
 
-    -- icons
-    "nvim-tree/nvim-web-devicons",
+  -- explorer
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   branch = "v2.x",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+  --     "MunifTanjim/nui.nvim",
+  --   }
+  -- },
 
-    -- statusline
-    "nvim-lualine/lualine.nvim",
+  -- icons
+  "nvim-tree/nvim-web-devicons",
 
-    -- fuzzy finding w/ telescope
-    "nvim-telescope/telescope.nvim", -- fuzzy finder
-    { "nvim-telescope/telescope-fzf-native.nvim",
-        build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-    },
-    {
-        'rmagatti/session-lens',
-        requires = { 'rmagatti/auto-session', 'nvim-telescope/telescope.nvim' },
-    },
-    {
-        "nvim-telescope/telescope-file-browser.nvim",
-        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-    },
-    "nvim-telescope/telescope-project.nvim",
-    "ahmedkhalf/project.nvim",
-    -- toggleterm
-    { "akinsho/toggleterm.nvim",         version = "*" },
+  -- statusline
+  "nvim-lualine/lualine.nvim",
 
-    -- git
-    "lewis6991/gitsigns.nvim",
-    { 'sindrets/diffview.nvim', dependencies = 'nvim-lua/plenary.nvim' },
+  -- fuzzy finding w/ telescope
+  "nvim-telescope/telescope.nvim",   -- fuzzy finder
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build =
+    "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+  },
+  {
+    'rmagatti/session-lens',
+    requires = { 'rmagatti/auto-session', 'nvim-telescope/telescope.nvim' },
+  },
+  {
+    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  },
+  "nvim-telescope/telescope-project.nvim",
+  "ahmedkhalf/project.nvim",
+  -- toggleterm
+  { "akinsho/toggleterm.nvim",         version = "*" },
 
-    -- motions
-    "ggandor/leap.nvim"
+  -- git
+  "lewis6991/gitsigns.nvim",
+  { 'sindrets/diffview.nvim', dependencies = 'nvim-lua/plenary.nvim' },
+
+  -- motions
+  "ggandor/leap.nvim",
+  "nvim-pack/nvim-spectre"
 })
