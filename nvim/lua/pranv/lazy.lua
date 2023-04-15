@@ -66,7 +66,7 @@ lazy.setup({
             { "rafamadriz/friendly-snippets" },
         }
     },
-    "onsails/lspkind.nvim", -- vs-code like icons for autocompletion
+    "ray-x/lsp_signature.nvim",
 
     -- dap
     "mfussenegger/nvim-dap",
