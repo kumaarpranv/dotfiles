@@ -25,7 +25,7 @@ lazy.setup({
   "ThePrimeagen/harpoon",
   "mbbill/undotree",
   "numToStr/Comment.nvim",
-  "lukas-reineke/indent-blankline.nvim",
+  "Yggdroot/indentLine",
   "windwp/nvim-autopairs",
   "mg979/vim-visual-multi",
   {
