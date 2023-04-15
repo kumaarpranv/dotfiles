@@ -67,6 +67,7 @@ lazy.setup({
         }
     },
     "ray-x/lsp_signature.nvim",
+    "glepnir/lspsaga.nvim",
 
     -- dap
     "mfussenegger/nvim-dap",
