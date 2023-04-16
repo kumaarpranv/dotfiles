@@ -43,6 +43,8 @@ vim.keymap.set("n", "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<CR>"
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>");
 vim.keymap.set("n", "<leader>fm", "<cmd>Telescope marks<CR>");
 vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>");
+vim.keymap.set("n", "lfc", "<cmd>Telescope lsp_document_symbols<CR>");
+vim.keymap.set("n", "lfw", "<cmd>Telescope lsp_workspace_symbols<CR>");
 vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<CR>");
 vim.keymap.set("n", "<leader>fe", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>");
 vim.keymap.set("n", "<leader>fp", ":lua require'telescope'.extensions.project.project{}<CR>");
