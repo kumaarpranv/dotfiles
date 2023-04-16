@@ -36,9 +36,14 @@ telescope.load_extension("project")
 telescope.load_extension("session-lens")
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>");
 vim.keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>");
-vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>");
+vim.keymap.set("n", "<leader>fgs", "<cmd>Telescope grep_string<CR>");
+vim.keymap.set("n", "<leader>fgc", "<cmd>Telescope git_commits<CR>");
+vim.keymap.set("n", "<leader>fgg", "<cmd>Telescope git_bcommits<CR>");
+vim.keymap.set("n", "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<CR>");
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>");
+vim.keymap.set("n", "<leader>fm", "<cmd>Telescope marks<CR>");
+vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>");
 vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<CR>");
-vim.keymap.set("n", "<leader>fb", "<cmd>Telescope file_browser<CR>");
-vim.keymap.set("n", "<leader>fbc", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>");
+vim.keymap.set("n", "<leader>fe", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>");
 vim.keymap.set("n", "<leader>fp", ":lua require'telescope'.extensions.project.project{}<CR>");
 

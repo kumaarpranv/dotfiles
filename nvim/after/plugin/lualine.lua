@@ -27,7 +27,7 @@ lualine.setup {
     }
   },
   sections = {
-    lualine_a = {'buffers'}, --mode'},
+    lualine_a = {'filename'}, -- buffers'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {''},
     lualine_x = {''},
