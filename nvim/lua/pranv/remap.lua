@@ -51,5 +51,7 @@ vim.keymap.set('n', "bo",
   end, { silent = true, desc = 'Close unused buffers' })
 vim.keymap.set("n", "bl", ":bnext<CR>")
 vim.keymap.set("n", "bh", ":bprev<CR>")
+vim.keymap.set("n", "wo", ":vsplit<CR>")
+vim.keymap.set("n", "wc", ":close<CR>")
 
 vim.keymap.set("n", "<leader>z", "<C-^>")

@@ -6,7 +6,7 @@ if not ok then
 end
 
 local startupGrp = vim.api.nvim_create_augroup("startup", { clear = true })
-local yankGrp = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+
 vim.api.nvim_create_autocmd("BufEnter", {
   -- command = "silent! lua vim.highlight.on_yank()",
   callback = function()
@@ -16,20 +16,13 @@ vim.api.nvim_create_autocmd("BufEnter", {
       if #(buflist)-(i+1) <= 4 then
         break
       end
-      if vim.api.nvim_buf_is_loaded(bufnr) and vim.bo[bufnr].buflisted and bufnr ~= curbufnr and (vim.fn.getbufvar(bufnr, 'bufpersist') ~= 1) then -- nvim_buf_is_loaded(bufnr) 
-        vim.cmd('bd ' .. tostring(bufnr))
+      if vim.api.nvim_buf_is_loaded(bufnr) and vim.bo[bufnr].buflisted and bufnr ~= curbufnr and (vim.fn.getbufvar(bufnr, 'bufpersist') ~= 1) then -- nvim_buf_is_loaded(bufnr) and vim.api.nvim_buf_is_valid(v)
+        vim.api.nvim_buf_delete(bufnr, {})
+        -- vim.cmd('bd ' .. tostring(bufnr))
       end
     end
   end,
   group = startupGrp,
-})
-
-vim.api.nvim_create_autocmd("TextYankPost", {
-  -- command = "silent! lua vim.highlight.on_yank()",
-  callback = function()
-    print "hello"
-  end,
-  group = yankGrp,
 })
 
 require('pranv.utils.tabby')
