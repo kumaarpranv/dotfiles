@@ -255,7 +255,7 @@ lspsaga.setup({
 -- If there is no definition, it will instead be hidden
 -- When you use an action in finder like "open vsplit",
 -- you can use <C-t> to jump back
-vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
+vim.keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>")
 
 -- Code action
 vim.keymap.set({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
@@ -331,7 +331,6 @@ vim.keymap.set("n","<leader>o", "<cmd>Lspsaga outline<CR>")
 -- close the hover window. If you want to jump to the hover window
 -- you should use the wincmd command "<C-w>w"
 vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc ++keep<CR>")
-vim.keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>")
 
 -- Call hierarchy
 vim.keymap.set("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
