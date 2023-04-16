@@ -29,7 +29,7 @@ lsp.preset('recommended')
 lsp.setup_servers({
   'tsserver',
   'eslint',
-  'jedi_language_server',
+  'pylsp',
   'gopls',
   'lua_ls',
   'clangd',
