@@ -55,3 +55,4 @@ vim.keymap.set("n", "wo", ":vsplit<CR>")
 vim.keymap.set("n", "wc", ":close<CR>")
 
 vim.keymap.set("n", "<leader>z", "<C-^>")
+vim.keymap.set("n", "<C-c>", ":q<CR>")
