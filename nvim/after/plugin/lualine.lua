@@ -3,12 +3,16 @@ if not ok then
   return
 end
 
+
+
 lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    -- component_separators = { left = '', right = ''},
+    -- section_separators = { left = '', right = ''},
+    component_separators = '|',
+    section_separators = '',
     disabled_filetypes = {
       statusline = {},
       winbar = {},
@@ -23,11 +27,11 @@ lualine.setup {
     }
   },
   sections = {
-    lualine_a = {'mode'},
+    lualine_a = {'buffers'}, --mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
-    lualine_x = {'filetype'},
-    lualine_y = {'progress'},
+    lualine_c = {''},
+    lualine_x = {''},
+    lualine_y = {''},
     lualine_z = {'location'}
   },
   inactive_sections = {

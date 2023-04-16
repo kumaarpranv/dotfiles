@@ -37,4 +37,19 @@ vim.keymap.set("n", "<leader>th", ":-tabmove<CR>")
 -- move current tab to next position
 vim.keymap.set("n", "<leader>tl", ":+tabmove<CR>")
 
+vim.keymap.set("n", "bn", ":vnew<CR>")
+vim.keymap.set("n", "bc", ":bdelete<CR>")
+vim.keymap.set('n', "bo",
+  function()
+    local curbufnr = vim.api.nvim_get_current_buf()
+    local buflist = vim.api.nvim_list_bufs()
+    for _, bufnr in ipairs(buflist) do
+      if vim.bo[bufnr].buflisted and bufnr ~= curbufnr and (vim.fn.getbufvar(bufnr, 'bufpersist') ~= 1) then -- nvim_buf_is_loaded(bufnr) 
+        vim.cmd('bd ' .. tostring(bufnr))
+      end
+    end
+  end, { silent = true, desc = 'Close unused buffers' })
+vim.keymap.set("n", "bl", ":bnext<CR>")
+vim.keymap.set("n", "bh", ":bprev<CR>")
+
 vim.keymap.set("n", "<leader>z", "<C-^>")
