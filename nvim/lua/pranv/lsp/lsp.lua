@@ -284,7 +284,7 @@ vim.keymap.set("n","gd", "<cmd>Lspsaga goto_definition<CR>")
 vim.keymap.set("n", "gt", "<cmd>Lspsaga peek_type_definition<CR>")
 
 -- Go to type definition
-vim.keymap.set("n","gt", "<cmd>Lspsaga goto_type_definition<CR>")
+-- vim.keymap.set("n","gt", "<cmd>Lspsaga goto_type_definition<CR>")
 
 
 -- Show line diagnostics
@@ -296,10 +296,10 @@ vim.keymap.set("n", "<leader>gsl", "<cmd>Lspsaga show_line_diagnostics<CR>")
 vim.keymap.set("n", "<leader>gb", "<cmd>Lspsaga show_buf_diagnostics<CR>")
 
 -- Show workspace diagnostics
-vim.keymap.set("n", "<leader>gw", "<cmd>Lspsaga show_workspace_diagnostics<CR>")
+-- vim.keymap.set("n", "<leader>gw", "<cmd>Lspsaga show_workspace_diagnostics<CR>")
 
 -- Show cursor diagnostics
-vim.keymap.set("n", "<leader>gc", "<cmd>Lspsaga show_cursor_diagnostics<CR>")
+-- vim.keymap.set("n", "<leader>gc", "<cmd>Lspsaga show_cursor_diagnostics<CR>")
 
 -- Diagnostic jump
 -- You can use <C-o> to jump back to your previous location
@@ -323,7 +323,7 @@ vim.keymap.set("n","<leader>o", "<cmd>Lspsaga outline<CR>")
 -- there is no information available.
 -- To disable it just use ":Lspsaga hover_doc ++quiet"
 -- Pressing the key twice will enter the hover window
-vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
+-- vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 
 -- If you want to keep the hover window in the top right hand corner,
 -- you can pass the ++keep argument
@@ -331,6 +331,7 @@ vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 -- close the hover window. If you want to jump to the hover window
 -- you should use the wincmd command "<C-w>w"
 vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc ++keep<CR>")
+vim.keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>")
 
 -- Call hierarchy
 vim.keymap.set("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
