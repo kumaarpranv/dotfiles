@@ -11,7 +11,7 @@ lualine.setup {
     theme = 'auto',
     -- component_separators = { left = '', right = ''},
     -- section_separators = { left = '', right = ''},
-    component_separators = '|',
+    component_separators = '',
     section_separators = '',
     disabled_filetypes = {
       statusline = {},
@@ -27,7 +27,7 @@ lualine.setup {
     }
   },
   sections = {
-    lualine_a = {'filename'}, -- buffers'},
+    lualine_a = {'mode', 'filename'}, -- buffers'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {''},
     lualine_x = {''},
