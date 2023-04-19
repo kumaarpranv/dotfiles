@@ -14,5 +14,6 @@ albert.conf
 !/sxhkd/
 !/kitty/
 !.picomconf
+!/tmux/
 # !/i3/
 #!/dunst/
