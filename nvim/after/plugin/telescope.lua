@@ -32,7 +32,6 @@ telescope.setup({
 })
 telescope.load_extension("fzf")
 telescope.load_extension("file_browser")
-telescope.load_extension("project")
 telescope.load_extension("session-lens")
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>");
 vim.keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>");
@@ -47,5 +46,5 @@ vim.keymap.set("n", "lfc", "<cmd>Telescope lsp_document_symbols<CR>");
 vim.keymap.set("n", "lfw", "<cmd>Telescope lsp_workspace_symbols<CR>");
 vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<CR>");
 vim.keymap.set("n", "<leader>fe", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>");
-vim.keymap.set("n", "<leader>fp", ":lua require'telescope'.extensions.project.project{}<CR>");
+vim.keymap.set("n", "<leader>fp", "<cmd>Telescope session-lens search_session<CR>");
 
