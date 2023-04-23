@@ -34,14 +34,6 @@ lazy.setup({
   },
   "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 
-  -- whichkey
-  {
-    "folke/which-key.nvim",
-    config = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-    end,
-  },
   "xiyaowong/nvim-transparent",
   -- lsp
   { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
