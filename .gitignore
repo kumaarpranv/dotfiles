@@ -16,5 +16,6 @@ albert.conf
 !.picomconf
 !/tmux/
 !/kitty./
+!/.zshrc
 # !/i3/
 #!/dunst/
