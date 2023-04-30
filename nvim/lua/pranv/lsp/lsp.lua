@@ -8,6 +8,11 @@ if not null_ok then
   return
 end
 
+local lspconfig_ok, lspconfig = pcall(require, "lspconfig")
+if not lspconfig_ok then
+  return
+end
+
 local lsp_signature_ok, lsp_signature = pcall(require, "lsp_signature")
 if not lsp_signature_ok then
   return
@@ -116,9 +121,16 @@ local mason_nullls = require("mason-null-ls")
 mason_nullls.setup({
   automatic_installation = true,
   automatic_setup = true,
-  ensure_installed = { "black" }
+  ensure_installed = {  }
 })
 -- mason_nullls.setup_handlers({})
+lspconfig.pylsp.setup{
+  on_attach=lsp.on_attach,
+    settings = { pylsp = { plugins = {
+     pycodestyle =  { enabled = false },
+     pylint =  { enabled = false }
+ } } }
+}
 
 vim.diagnostic.config({
   virtual_text = false,
