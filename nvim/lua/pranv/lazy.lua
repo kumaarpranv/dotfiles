@@ -73,7 +73,6 @@ lazy.setup({
   "gruvbox-community/gruvbox",
   "EdenEast/nightfox.nvim",
   { "catppuccin/nvim", name = "catppuccin" },
-  "junegunn/seoul256.vim",
   "sainnhe/sonokai",
   "rebelot/kanagawa.nvim",
 
