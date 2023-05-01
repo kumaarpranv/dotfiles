@@ -373,7 +373,7 @@ tmux_conf_copy_to_os_clipboard=false
 # bind % split-window -h -c "#{pane_current_path}"
 # bind c new-window -c "#{pane_current_path}"
 #bind q killw
-bind k kill-server
+bind k kill-session -a
 # if you don't want Oh my tmux! to alter a binding, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
 
