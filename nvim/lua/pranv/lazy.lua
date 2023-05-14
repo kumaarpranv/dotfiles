@@ -7,9 +7,6 @@ end
 
 
 lazy.setup({
-  -- Packer can manage itself
-  "wbthomason/packer.nvim",
-
   -- optimizations
   "lewis6991/impatient.nvim",
 
@@ -22,7 +19,6 @@ lazy.setup({
   },
   --utils
   "nvim-lua/plenary.nvim",
-  "ThePrimeagen/harpoon",
   "mbbill/undotree",
   "numToStr/Comment.nvim",
   "Yggdroot/indentLine",
@@ -37,6 +33,7 @@ lazy.setup({
   "xiyaowong/nvim-transparent",
   -- lsp
   { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
+  {"nvim-treesitter/nvim-treesitter-context"},
   {
     "VonHeikemen/lsp-zero.nvim",
     dependencies = {
