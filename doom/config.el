@@ -44,8 +44,8 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
-;; Set the default font size to 16 points.
-(set-face-attribute 'default nil :height 160)
+;; Set the default font size to 22 points.
+(set-face-attribute 'default nil :height 220)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
